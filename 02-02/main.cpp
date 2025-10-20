@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdio>
 
-// This is a recursive function to calculate the hourly wage.
+
 long long recursiveHourlyWage(int h) {
     if (h <= 1) {
         return 100;
@@ -15,7 +15,7 @@ void compareWageSystems() {
     const int STANDARD_HOURLY_WAGE = 1226;
     int hours = 0;
 
-    // --- Wage System Comparison ---
+    
     printf("Hour | Standard Total | Recursive Hourly | Recursive Total\n");
     printf("----------------------------------------------------------\n");
 
@@ -26,7 +26,7 @@ void compareWageSystems() {
         long long currentRecursiveHourly = recursiveHourlyWage(hours);
         recursiveTotalWage += currentRecursiveHourly;
 
-        // IMPORTANT: The format string "..." is on a single line.
+        
         printf("%4d | %14lld | %16lld | %15lld\n",
             hours, standardTotalWage, currentRecursiveHourly, recursiveTotalWage);
 
