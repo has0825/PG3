@@ -21,7 +21,7 @@ public:
     Dog() : Animal("犬") {}
 
     void Cry() override {
-        std::cout << "[" << species << "] が吠えました: ワンワン" << std::endl;
+        std::cout << "[" << species << "] が吠えました:ワンワン" << std::endl;
     }
 };
 
