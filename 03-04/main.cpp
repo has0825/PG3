@@ -2,10 +2,8 @@
 
 class Base {
 public:
-
-    virtual void Func() = 0;
-
     virtual ~Base() {}
+    virtual void Func() = 0;
 };
 
 class Sub : public Base {
@@ -17,11 +15,9 @@ public:
 
 class IInf {
 public:
-
+    virtual ~IInf() {}
     virtual void Func1() = 0;
     virtual void Func2() = 0;
-
-    virtual ~IInf() {}
 };
 
 class CClass : public IInf {
@@ -38,17 +34,15 @@ public:
 int main() {
 
     Base* basePtr = new Sub();
-
     basePtr->Func();
-
     delete basePtr;
+
+    std::cout << std::endl;
 
 
     IInf* infPtr = new CClass();
-
     infPtr->Func1();
     infPtr->Func2();
-
     delete infPtr;
 
     return 0;
