@@ -1,12 +1,10 @@
 #include <iostream>
 
-
 enum class Phase {
     Approach,   // 接近
     Shoot,      // 射撃
     Retreat,    // 離脱
-
-    Max,        // 状態数（終了判定用）
+    Max,        // 状態数
 };
 
 class Enemy {
@@ -29,9 +27,9 @@ private:
 
 
 Enemy::StateFunc Enemy::stateTable[] = {
-    &Enemy::Approach, // [0] 接近
-    &Enemy::Shoot,    // [1] 射撃
-    &Enemy::Retreat   // [2] 離脱
+    &Enemy::Approach,
+    &Enemy::Shoot,
+    &Enemy::Retreat
 };
 
 Enemy::Enemy() : phase_(Phase::Approach) {
@@ -73,7 +71,7 @@ bool Enemy::Update() {
 int main() {
     Enemy enemy;
 
-    std::cout << "--- シミュレーション開始 ---" << std::endl;
+    std::cout << "---開始---" << std::endl;
 
     while (true) {
 
@@ -82,7 +80,7 @@ int main() {
         }
     }
 
-    std::cout << "--- シミュレーション終了 ---" << std::endl;
+    std::cout << "---終了---" << std::endl;
 
     return 0;
 }

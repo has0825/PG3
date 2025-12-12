@@ -1,10 +1,9 @@
-#include <stdio.h>      
-#include <stdlib.h>     
+#include <stdio.h>        
 #include <time.h>       
 #include <windows.h>    
 
 void DelayReveal(void (*fn)(int, int), unsigned int delayMs, int roll, int userGuess) {
-    printf("...3秒後に結果を表示します...\n"); 
+    printf("...3秒後に結果を表示...\n"); 
     Sleep(delayMs);
     fn(roll, userGuess);
 }

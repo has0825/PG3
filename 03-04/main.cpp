@@ -39,7 +39,6 @@ int main() {
 
     std::cout << std::endl;
 
-
     IInf* infPtr = new CClass();
     infPtr->Func1();
     infPtr->Func2();

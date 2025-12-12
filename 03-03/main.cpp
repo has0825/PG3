@@ -12,7 +12,7 @@ public:
     virtual ~Animal() {}
 
     virtual void Cry() {
-        std::cout << "（正体不明の動物が鳴いています...）" << std::endl;
+        std::cout << "（動物が鳴いている...）" << std::endl;
     }
 };
 
@@ -50,15 +50,12 @@ int main() {
     zoo[1] = new Cat();
     zoo[2] = new Sheep();
 
-
     for (int i = 0; i < 3; i++) {
         zoo[i]->Cry();
     }
 
-
     for (int i = 0; i < 3; i++) {
         delete zoo[i];
     }
-
     return 0;
 }
