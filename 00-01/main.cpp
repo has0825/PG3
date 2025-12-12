@@ -1,5 +1,4 @@
 #include <cstdio>
-#include <windows.h>
 
 int main() {
 

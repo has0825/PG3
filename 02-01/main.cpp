@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// --- 関数テンプレート Min() ---
 template <typename T>
 T Min(T a, T b) {
     return (a < b) ? a : b;

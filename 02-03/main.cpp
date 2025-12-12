@@ -1,5 +1,4 @@
 #include <stdio.h>      
-#include <stdlib.h>     
 #include <time.h>       
 #include <windows.h>    
 
@@ -8,9 +7,7 @@ void ShowResult(int roll, int userGuess) {
 
     int rollParity = roll % 2; 
 
-
-    printf("出目は %d でした。\n", roll);
-
+    printf("出目は%d\n", roll);
 
     if (userGuess == rollParity) {
         printf("正解\n");
@@ -21,13 +18,10 @@ void ShowResult(int roll, int userGuess) {
 
 
 void DelayReveal(void (*fn)(int, int), unsigned int delayMs, int roll, int userGuess) {
+    printf("...3秒後に結果を表示...\n"); 
 
-    printf("...3秒後に結果を表示します...\n"); 
-
-    
     Sleep(delayMs);
 
-    
     fn(roll, userGuess);
 }
 
@@ -40,7 +34,7 @@ int main() {
     int userGuess;
 
     printf("サイコロの出目は「奇数」か「偶数」か？\n");
-    printf("予想を入力してください (奇数=1, 偶数=0): ");
+    printf("予想を入力してください (奇数=1, 偶数=0):");
    
     scanf_s("%d", &userGuess);
 

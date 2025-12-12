@@ -25,10 +25,6 @@ bool compareStudentId(const std::string& a, const std::string& b) {
 
 int main() {
     std::ifstream file("PG3_2025_01_02.txt");
-    if (!file) {
-        std::cerr << "ファイルを開けませんでした\n";
-        return 1;
-    }
 
     std::string line;
     std::getline(file, line);
