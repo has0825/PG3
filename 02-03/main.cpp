@@ -5,42 +5,42 @@
 
 void ShowResult(int roll, int userGuess) {
 
-    int rollParity = roll % 2; 
+	int rollParity = roll % 2;
 
-    printf("出目は%d\n", roll);
+	printf("出目は%d\n", roll);
 
-    if (userGuess == rollParity) {
-        printf("正解\n");
-    } else {
-        printf("不正解\n");
-    }
+	if (userGuess == rollParity) {
+		printf("正解\n");
+	} else {
+		printf("不正解\n");
+	}
 }
 
 
 void DelayReveal(void (*fn)(int, int), unsigned int delayMs, int roll, int userGuess) {
-    printf("...3秒後に結果を表示...\n"); 
+	printf("...3秒後に結果を表示...\n");
 
-    Sleep(delayMs);
+	Sleep(delayMs);
 
-    fn(roll, userGuess);
+	fn(roll, userGuess);
 }
 
 
 
 int main() {
 
-    srand((unsigned)time(NULL));
+	srand((unsigned)time(NULL));
 
-    int userGuess;
+	int userGuess;
 
-    printf("サイコロの出目は「奇数」か「偶数」か？\n");
-    printf("予想を入力してください (奇数=1, 偶数=0):");
-   
-    scanf_s("%d", &userGuess);
+	printf("サイコロの出目は「奇数」か「偶数」か？\n");
+	printf("予想を入力してください (奇数=1, 偶数=0):");
 
-    int roll = rand() % 6 + 1;
+	scanf_s("%d", &userGuess);
 
-    DelayReveal(ShowResult, 3000, roll, userGuess);
+	int roll = rand() % 6 + 1;
 
-    return 0;
+	DelayReveal(ShowResult, 3000, roll, userGuess);
+
+	return 0;
 }

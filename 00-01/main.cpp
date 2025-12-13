@@ -2,7 +2,7 @@
 
 int main() {
 
-    std::printf("こんにちは\n");
+	std::printf("こんにちは\n");
 
-    return 0;
+	return 0;
 }

@@ -3,43 +3,43 @@
 
 
 long long recursiveHourlyWage(int h) {
-    if (h <= 1) {
-        return 100;
-    }
-    return recursiveHourlyWage(h - 1) * 2 - 50;
+	if (h <= 1) {
+		return 100;
+	}
+	return recursiveHourlyWage(h - 1) * 2 - 50;
 }
 
 void compareWageSystems() {
-    long long standardTotalWage = 0;
-    long long recursiveTotalWage = 0;
-    const int STANDARD_HOURLY_WAGE = 1226;
-    int hours = 0;
+	long long standardTotalWage = 0;
+	long long recursiveTotalWage = 0;
+	const int STANDARD_HOURLY_WAGE = 1226;
+	int hours = 0;
 
-    
-    printf("Hour | Standard Total | Recursive Hourly | Recursive Total\n");
-    printf("----------------------------------------------------------\n");
 
-    while (true) {
-        hours++;
-        standardTotalWage += STANDARD_HOURLY_WAGE;
+	printf("Hour | Standard Total | Recursive Hourly | Recursive Total\n");
+	printf("----------------------------------------------------------\n");
 
-        long long currentRecursiveHourly = recursiveHourlyWage(hours);
-        recursiveTotalWage += currentRecursiveHourly;
+	while (true) {
+		hours++;
+		standardTotalWage += STANDARD_HOURLY_WAGE;
 
-        
-        printf("%4d | %14lld | %16lld | %15lld\n",
-            hours, standardTotalWage, currentRecursiveHourly, recursiveTotalWage);
+		long long currentRecursiveHourly = recursiveHourlyWage(hours);
+		recursiveTotalWage += currentRecursiveHourly;
 
-        if (recursiveTotalWage > standardTotalWage) {
-            break;
-        }
-    }
 
-    printf("----------------------------------------------------------\n");
-    printf("After %d hours, the recursive wage system becomes more profitable.\n", hours);
+		printf("%4d | %14lld | %16lld | %15lld\n",
+			hours, standardTotalWage, currentRecursiveHourly, recursiveTotalWage);
+
+		if (recursiveTotalWage > standardTotalWage) {
+			break;
+		}
+	}
+
+	printf("----------------------------------------------------------\n");
+	printf("After %d hours, the recursive wage system becomes more profitable.\n", hours);
 }
 
 int main() {
-    compareWageSystems();
-    return 0;
+	compareWageSystems();
+	return 0;
 }
