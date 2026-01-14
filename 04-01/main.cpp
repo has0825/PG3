@@ -72,7 +72,7 @@ public:
 
 	void Draw() override {
 		Novice::ScreenPrintf(600, 360, "TITLE SCENE");
-		Novice::ScreenPrintf(580, 380, "Press SPACE to Start");
+		Novice::ScreenPrintf(560, 380, "Press SPACE to Start");
 	}
 };
 
