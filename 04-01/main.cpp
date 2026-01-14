@@ -1,7 +1,7 @@
 #include <Novice.h>
 #include <memory>
 
-const char kWindowTitle[] = "LC1B_12_シミズグチ_ハル_StatePattern";
+const char kWindowTitle[] = "LE2B_11_シミズグチ_ハル";
 
 
 class InputManager {
