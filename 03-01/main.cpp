@@ -37,19 +37,19 @@ Enemy::Enemy() : phase_(Phase::Approach) {
 }
 
 void Enemy::Approach() {
-	std::cout << "敵の状態:接近" << std::endl;
+	std::cout<<"敵の状態:接近"<<std::endl;
 
 	phase_ = Phase::Shoot;
 }
 
 void Enemy::Shoot() {
-	std::cout << "敵の状態:射撃" << std::endl;
+	std::cout<<"敵の状態:射撃"<<std::endl;
 
 	phase_ = Phase::Retreat;
 }
 
 void Enemy::Retreat() {
-	std::cout << "敵の状態:離脱" << std::endl;
+	std::cout<<"敵の状態:離脱"<<std::endl;
 
 	phase_ = Phase::Max;
 }
@@ -57,7 +57,7 @@ void Enemy::Retreat() {
 
 bool Enemy::Update() {
 
-	if (phase_ >= Phase::Max) {
+	if (phase_>= Phase::Max) {
 		return false;
 	}
 
@@ -71,7 +71,7 @@ bool Enemy::Update() {
 int main() {
 	Enemy enemy;
 
-	std::cout << "---開始---" << std::endl;
+	std::cout<<"---開始---"<<std::endl;
 
 	while (true) {
 
@@ -80,7 +80,7 @@ int main() {
 		}
 	}
 
-	std::cout << "---終了---" << std::endl;
+	std::cout<<"---終了---"<<std::endl;
 
 	return 0;
 }

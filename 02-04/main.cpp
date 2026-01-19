@@ -12,7 +12,7 @@ int main() {
 	srand((unsigned)time(NULL));
 	int userGuess;
 	printf("サイコロの出目は「奇数」か「偶数」か？\n");
-	printf("予想を入力してください (奇数=1, 偶数=0): ");
+	printf("予想を入力してください(奇数=1,偶数=0):");
 	scanf_s("%d", &userGuess);
 	int roll = rand() % 6 + 1;
 	DelayReveal(
@@ -20,7 +20,7 @@ int main() {
 
 			int rollParity = r % 2;
 
-			printf("出目は %d でした。\n", r);
+			printf("出目は%dでした。\n", r);
 
 			if (ug == rollParity) {
 				printf("正解\n");
