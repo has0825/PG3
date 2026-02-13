@@ -3,7 +3,6 @@
 
 const char kWindowTitle[] = "LE2B_11_シミズグチ_ハル";
 
-
 class InputManager {
 public:
 	
